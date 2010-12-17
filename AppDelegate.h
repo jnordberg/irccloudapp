@@ -4,6 +4,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
   NSWindow *window;
+  WebView *webView;
 }
 
 - (int)checkPermission;
