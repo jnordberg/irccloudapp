@@ -39,6 +39,11 @@
     badge = [NSString stringWithFormat:@"%d", unread];
   }
 
+  NSRange pipepos = [title rangeOfString:@" | IRCCloud" options:NSBackwardsSearch];
+  if (pipepos.location != NSNotFound) {
+    title = [title substringToIndex:pipepos.location];
+  }
+
   [[[NSApplication sharedApplication] dockTile] setBadgeLabel:badge];
   [window setTitle:title];
 }
