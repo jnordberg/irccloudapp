@@ -9,6 +9,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification { 
   [webView setMainFrameURL:@"https://irccloud.com"];
   [webView setFrameLoadDelegate:self];
+  [webView setPolicyDelegate:self];
 
   // listen for title changes
   [webView addObserver:self
@@ -50,6 +51,13 @@
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:self forKey:@"webkitNotifications"];
+}
+
+- (void)webView:(WebView *)webView decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request
+   newFrameName:(NSString *)frameName decisionListener:(id <WebPolicyDecisionListener>)listener {
+  // route all links that request a new window to default browser
+  [listener ignore];
+  [[NSWorkspace sharedWorkspace] openURL:[request URL]];
 }
 
 - (int)checkPermission {
