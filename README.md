@@ -7,4 +7,3 @@ Standalone IRCCloud client for OS X
 TODO
 ----
 
- * Better icon
