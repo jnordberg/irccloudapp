@@ -21,6 +21,8 @@
   [GrowlApplicationBridge setGrowlDelegate:nil];
 }
 
+#pragma mark -
+
 - (void)titleDidChange:(NSString *)title {
   NSUInteger unread = 0;
 
@@ -54,9 +56,13 @@
   }
 }
 
+#pragma mark FrameLoadDelegate
+
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:self forKey:@"webkitNotifications"];
 }
+
+#pragma mark WebPolicyDelegate
 
 - (void)webView:(WebView *)webView decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request
    newFrameName:(NSString *)frameName decisionListener:(id <WebPolicyDecisionListener>)listener {
@@ -64,6 +70,8 @@
   [listener ignore];
   [[NSWorkspace sharedWorkspace] openURL:[request URL]];
 }
+
+#pragma mark WebkitNotifications
 
 - (int)checkPermission {
   // always grant permission (0 = allow, 1 = unknown, 2 = denied)
