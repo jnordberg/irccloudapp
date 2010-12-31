@@ -10,6 +10,7 @@
   [webView setMainFrameURL:@"https://irccloud.com"];
   [webView setFrameLoadDelegate:self];
   [webView setPolicyDelegate:self];
+  [webView setUIDelegate:self];
 
   // listen for title changes
   [webView addObserver:self
@@ -69,6 +70,13 @@
   // route all links that request a new window to default browser
   [listener ignore];
   [[NSWorkspace sharedWorkspace] openURL:[request URL]];
+}
+
+#pragma mark WebUIDelegate
+
+- (BOOL)webView:(WebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
+  NSInteger result = NSRunAlertPanel(@"Please confirm", message, @"Yes", @"No", nil);
+  return result == NSAlertDefaultReturn;
 }
 
 #pragma mark WebkitNotifications
