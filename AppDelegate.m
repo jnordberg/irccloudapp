@@ -12,6 +12,10 @@
   [webView setPolicyDelegate:self];
   [webView setUIDelegate:self];
 
+  // user agent
+  NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+  [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"irccloudapp/%@", version]];
+
   // listen for title changes
   [webView addObserver:self
             forKeyPath:@"mainFrameTitle"
