@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
-		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
+		A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
+		A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */; };
 		A5454DC912BB998300186603 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
-		A5454DFB12BB9CD700186603 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
+		A5454DFB12BB9CD700186603 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
 		A5454E0F12BBA1A300186603 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */; };
 		A5454E4712BBAB9100186603 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5454E4612BBAB9100186603 /* Icon.icns */; };
 		A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFF4B412B91F4200A4AF20 /* WebKit.framework */; };
@@ -20,20 +22,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A5454DFA12BB9CC000186603 /* CopyFiles */ = {
+		A5454DFA12BB9CC000186603 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A5454DFB12BB9CD700186603 /* Growl.framework in CopyFiles */,
+				A5454DFB12BB9CD700186603 /* Growl.framework in Copy Frameworks */,
+				A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */,
 			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		256AC3D80F4B6AC300CF3369 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		256AC3D90F4B6AC300CF3369 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +46,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* IRCCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRCCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5253352131FC279005FDAAF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irccloudapp_pub.pem; sourceTree = "<group>"; };
 		A5454DC812BB998300186603 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		A5454E4612BBAB9100186603 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */,
 				A5454DC912BB998300186603 /* Growl.framework in Frameworks */,
+				A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +114,8 @@
 				A5EFF4D312B921C500A4AF20 /* MainMenu.xib */,
 				A5454E4612BBAB9100186603 /* Icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */,
+				A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				A5EFF4B412B91F4200A4AF20 /* WebKit.framework */,
 				A5454DC812BB998300186603 /* Growl.framework */,
+				A5253352131FC279005FDAAF /* Sparkle.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,7 +141,7 @@
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "irccloudapp" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
-				A5454DFA12BB9CC000186603 /* CopyFiles */,
+				A5454DFA12BB9CC000186603 /* Copy Frameworks */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 			);
@@ -178,9 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5454E0F12BBA1A300186603 /* Growl Registration Ticket.growlRegDict in Resources */,
-				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */,
 				A5454E4712BBAB9100186603 /* Icon.icns in Resources */,
+				A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,17 +204,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C165DFE840E0CC02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C01FCF4B08A954540054247B /* Debug */ = {

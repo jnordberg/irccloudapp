@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>irccloudapp Changelog</title>
+    <link>https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+
+    <item>
+      <title>Version 0.3</title>
+      <description><![CDATA[
+        <p>Add autoupdates using sparkle.</p>
+      ]]></description>
+      <pubDate>Thu, 03 Mar 2011 14:06:57 +0100</pubDate>
+      <enclosure
+        url="http://johan-nordberg.com/irccloudapp-0.3.zip"
+        sparkle:shortVersionString="0.3"
+        sparkle:version="3"
+        length="569039"
+        type="application/zip"
+        sparkle:dsaSignature="MC4CFQCrBEKvFFTmJVm9f1byY8r9o3pWeAIVAL46+h9OVsTggckLuppWF7dyWa4W"
+      />
+    </item>
+
+    <item>
+      <title>Version 0.2</title>
+      <description><![CDATA[
+        <p>Version 0.2</p>
+      ]]></description>
+      <pubDate>Tue, 21 Dec 2010 11:49:31 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/irccloudapp-0.2.zip"
+        sparkle:shortVersionString="0.2"
+        sparkle:version="2"
+        length="168334"
+        type="application/zip"
+        sparkle:dsaSignature=""
+      />
+    </item>
+
+    <item>
+      <title>Version 0.1</title>
+      <description><![CDATA[
+        <p>Version 0.1</p>
+      ]]></description>
+      <pubDate>Fri, 17 Dec 2010 17:46:54 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/irccloudapp-0.1.zip"
+        sparkle:shortVersionString="0.1"
+        sparkle:version="1"
+        length="144860"
+        type="application/zip"
+        sparkle:dsaSignature=""
+      />
+    </item>
+
+  </channel>
+</rss>

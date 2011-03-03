@@ -28,5 +28,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SUFeedURL</key>
+	<string>https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>irccloudapp_pub.pem</string>
 </dict>
 </plist>
