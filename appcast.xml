@@ -10,15 +10,17 @@
       <title>Version 0.3</title>
       <description><![CDATA[
         <p>Add autoupdates using sparkle.</p>
+        <p>Add text resizing.</p>
+        <p>Fix bug where deleting channels and old chats would not work.</p>
       ]]></description>
-      <pubDate>Thu, 03 Mar 2011 14:06:57 +0100</pubDate>
+      <pubDate>Thu, 03 Mar 2011 16:01:57 +0100</pubDate>
       <enclosure
-        url="http://johan-nordberg.com/irccloudapp-0.3.zip"
+        url="https://github.com/downloads/jnordberg/irccloudapp/irccloudapp-0.3.zip"
         sparkle:shortVersionString="0.3"
         sparkle:version="3"
-        length="569039"
+        length="576418"
         type="application/zip"
-        sparkle:dsaSignature="MC4CFQCrBEKvFFTmJVm9f1byY8r9o3pWeAIVAL46+h9OVsTggckLuppWF7dyWa4W"
+        sparkle:dsaSignature="MCwCFA+cvL/SDOzfQr79wdNZ/9U1gvqUAhQ9T6C293ny4PyWPihSoVVgCp5NUQ=="
       />
     </item>
 
