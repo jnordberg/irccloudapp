@@ -7,6 +7,23 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.3.1</title>
+      <description><![CDATA[
+        <p>Report a proper user-agent to irccloud.com</p>
+        <p>(testing sparkle autoupdates)</p>
+      ]]></description>
+      <pubDate>Thu, 03 Mar 2011 16:41:57 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/irccloudapp-0.3.1.zip"
+        sparkle:shortVersionString="0.3.1"
+        sparkle:version="4"
+        length="576716"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFQCbchbJg+9dOL/TQziPiGPdJ1hzXQIUXv7roKwEzYSP+a+PvX/AU4Y/3+0="
+      />
+    </item>
+
+    <item>
       <title>Version 0.3</title>
       <description><![CDATA[
         <p>Add autoupdates using sparkle.</p>
