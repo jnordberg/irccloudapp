@@ -7,6 +7,7 @@
   NSWindow *window;
   WebView *webView;
   JSConsole *console;
+  NSArray *userScripts;
 }
 
 - (int)checkPermission;

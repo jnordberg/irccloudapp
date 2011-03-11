@@ -2,12 +2,15 @@
 #import "AppDelegate.h"
 #import <Growl/Growl.h>
 
+@interface AppDelegate (PrivateMethods)
+- (void)loadUserScripts;
+@end
+
 @implementation AppDelegate
 
 @synthesize window, webView;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification { 
-  [webView setMainFrameURL:@"https://irccloud.com"];
   [webView setFrameLoadDelegate:self];
   [webView setPolicyDelegate:self];
   [webView setUIDelegate:self];
@@ -26,6 +29,33 @@
   [GrowlApplicationBridge setGrowlDelegate:nil];
 
   console = [[JSConsole alloc] init];
+
+  [self loadUserScripts];
+
+  [webView setMainFrameURL:@"https://irccloud.com"];
+}
+
+#pragma mark -
+
+- (void)loadUserScripts {
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+
+  NSString *folder = @"~/Library/Application Support/irccloudapp/Scripts/";
+  folder = [folder stringByExpandingTildeInPath];
+
+  if ([fileManager fileExistsAtPath:folder] == NO) {
+    [fileManager createDirectoryAtPath:folder withIntermediateDirectories:YES attributes:nil error:NULL];
+  }
+
+  NSArray *files = [fileManager contentsOfDirectoryAtPath:folder error:NULL];
+  NSMutableArray *scripts = [[NSMutableArray alloc] initWithCapacity:[files count]];
+
+  for (NSString* file in files) {
+    [scripts addObject:[folder stringByAppendingPathComponent:file]];
+  }
+
+  userScripts = [[NSArray alloc] initWithArray:scripts];
+  [scripts release];
 }
 
 #pragma mark -
@@ -68,6 +98,12 @@
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:self forKey:@"webkitNotifications"];
   [windowScriptObject setValue:console forKey:@"console"];
+
+  // inject userscripts
+  for (NSString *script in userScripts) {
+    NSLog(@"loading script: %@", script);
+    [windowScriptObject evaluateWebScript:[NSString stringWithContentsOfFile:script usedEncoding:nil error:NULL]];
+  }
 }
 
 #pragma mark WebPolicyDelegate
@@ -129,6 +165,7 @@
 
 - (void)dealloc {
   [console release];
+  [userScripts release];
   [super dealloc];
 }
 
