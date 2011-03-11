@@ -17,6 +17,7 @@
 		A5454DFB12BB9CD700186603 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
 		A5454E0F12BBA1A300186603 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */; };
 		A5454E4712BBAB9100186603 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5454E4612BBAB9100186603 /* Icon.icns */; };
+		A5D796BD132A30290054DF4A /* JSConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D796BC132A30290054DF4A /* JSConsole.m */; };
 		A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFF4B412B91F4200A4AF20 /* WebKit.framework */; };
 		A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EFF4D312B921C500A4AF20 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,8 @@
 		A5454DC812BB998300186603 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		A5454E4612BBAB9100186603 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		A5D796BB132A30290054DF4A /* JSConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSConsole.h; sourceTree = "<group>"; };
+		A5D796BC132A30290054DF4A /* JSConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSConsole.m; sourceTree = "<group>"; };
 		A5EFF4B412B91F4200A4AF20 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A5EFF4D312B921C500A4AF20 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +78,8 @@
 			children = (
 				256AC3D80F4B6AC300CF3369 /* AppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* AppDelegate.m */,
+				A5D796BB132A30290054DF4A /* JSConsole.h */,
+				A5D796BC132A30290054DF4A /* JSConsole.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
+				A5D796BD132A30290054DF4A /* JSConsole.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

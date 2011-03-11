@@ -1,10 +1,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
+#import "JSConsole.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
   NSWindow *window;
   WebView *webView;
+  JSConsole *console;
 }
 
 - (int)checkPermission;

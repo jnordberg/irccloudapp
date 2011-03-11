@@ -24,6 +24,8 @@
 
   // seems you have to kickstart the GrowlApplicationBridge :|
   [GrowlApplicationBridge setGrowlDelegate:nil];
+
+  console = [[JSConsole alloc] init];
 }
 
 #pragma mark -
@@ -65,6 +67,7 @@
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:self forKey:@"webkitNotifications"];
+  [windowScriptObject setValue:console forKey:@"console"];
 }
 
 #pragma mark WebPolicyDelegate
@@ -81,6 +84,10 @@
 - (BOOL)webView:(WebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
   NSInteger result = NSRunAlertPanel(@"Please confirm", message, @"Yes", @"No", nil);
   return result == NSAlertDefaultReturn;
+}
+
+- (void)webView:(WebView *)webView addMessageToConsole:(NSDictionary *)dictionary {
+  NSLog(@"ERROR: %@", [dictionary objectForKey:@"message"]);
 }
 
 #pragma mark WebkitNotifications
@@ -116,6 +123,13 @@
     return NO;
   }
   return YES;
+}
+
+#pragma mark -
+
+- (void)dealloc {
+  [console release];
+  [super dealloc];
 }
 
 @end
