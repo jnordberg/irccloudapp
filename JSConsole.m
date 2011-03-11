@@ -30,10 +30,8 @@ typedef enum {
 
   if ([value isMemberOfClass:[WebScriptObject class]]) {
     message = [self stringFromWebScriptObject:(WebScriptObject *)value];
-  } else if ([value isMemberOfClass:[NSString class]]) {
-    message = (NSString *)value;
   } else {
-    message = [value stringRepresentation];
+    message = [NSString stringWithString:value];
   }
 
   NSString *levelStr;
