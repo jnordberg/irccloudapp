@@ -11,7 +11,8 @@
 }
 
 - (int)checkPermission;
-- (void)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message;
+- (WebScriptObject *)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message;
+- (void)requestPermissionWithCallback:(WebScriptObject *)callback;
 
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet WebView *webView;

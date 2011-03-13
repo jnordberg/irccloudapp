@@ -10,6 +10,7 @@
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		A5157587132CFA20001BACE0 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = A5157586132CFA20001BACE0 /* Notification.m */; };
 		A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
 		A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
 		A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */; };
@@ -47,6 +48,8 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* IRCCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IRCCloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5157585132CFA20001BACE0 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
+		A5157586132CFA20001BACE0 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		A5253352131FC279005FDAAF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irccloudapp_pub.pem; sourceTree = "<group>"; };
 		A5454DC812BB998300186603 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				256AC3D90F4B6AC300CF3369 /* AppDelegate.m */,
 				A5D796BB132A30290054DF4A /* JSConsole.h */,
 				A5D796BC132A30290054DF4A /* JSConsole.m */,
+				A5157585132CFA20001BACE0 /* Notification.h */,
+				A5157586132CFA20001BACE0 /* Notification.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
 				A5D796BD132A30290054DF4A /* JSConsole.m in Sources */,
+				A5157587132CFA20001BACE0 /* Notification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

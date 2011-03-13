@@ -1,5 +1,7 @@
 
 #import "AppDelegate.h"
+#import "Notification.h"
+
 #import <Growl/Growl.h>
 
 @interface AppDelegate (PrivateMethods)
@@ -133,29 +135,32 @@
   return 0;
 }
 
-- (void)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message {
-  // this is a lazy implementation of notifications. works as long every notification in the
-  // irccloud app calls notification.show() directly after creating it
-  [GrowlApplicationBridge notifyWithTitle:title
-                              description:message
-                         notificationName:@"IRCCloudMessage"
-                                 iconData:nil
-                                 priority:0
-                                 isSticky:NO
-                             clickContext:nil];
+- (WebScriptObject *)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message {
+  Notification *note = [[Notification alloc] initWithTitle:title message:message];
+  return [note autorelease];
 }
 
-+(NSString *)webScriptNameForSelector:(SEL)sel {
+- (void)requestPermissionWithCallback:(WebScriptObject *)callback {
+  if (callback && [callback isMemberOfClass:[WebScriptObject class]]) {
+    [callback callWebScriptMethod:@"call" withArguments:nil];
+  }
+}
+
++ (NSString *)webScriptNameForSelector:(SEL)sel {
   if (sel == @selector(checkPermission)) {
     return @"checkPermission";
   } else if (sel == @selector(createNotificationWithIcon:title:message:)) {
     return @"createNotification";
+  } else if (sel == @selector(requestPermissionWithCallback:)) {
+    return @"requestPermission";
   }
   return nil;
 }
 
 + (BOOL)isSelectorExcludedFromWebScript:(SEL)sel {
-  if (sel == @selector(checkPermission) || sel == @selector(createNotificationWithIcon:title:message:)) {
+  if (sel == @selector(checkPermission) ||
+      sel == @selector(createNotificationWithIcon:title:message:) ||
+      sel == @selector(requestPermissionWithCallback:)) {
     return NO;
   }
   return YES;
