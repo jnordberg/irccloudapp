@@ -124,6 +124,10 @@
   return result == NSAlertDefaultReturn;
 }
 
+- (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
+  NSRunAlertPanel(@"IRCCloud", message, @"Ok", nil, nil);
+}
+
 - (void)webView:(WebView *)webView addMessageToConsole:(NSDictionary *)dictionary {
   NSLog(@"ERROR: %@", [dictionary objectForKey:@"message"]);
 }
