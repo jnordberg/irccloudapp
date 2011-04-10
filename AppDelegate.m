@@ -19,7 +19,7 @@
 
   // user agent
   NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-  [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"irccloudapp/%@", version]];
+  [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"nimbus/%@", version]];
 
   // listen for title changes
   [webView addObserver:self
@@ -42,7 +42,7 @@
 - (void)loadUserScripts {
   NSFileManager *fileManager = [NSFileManager defaultManager];
 
-  NSString *folder = @"~/Library/Application Support/irccloudapp/Scripts/";
+  NSString *folder = @"~/Library/Application Support/nimbus/Scripts/";
   folder = [folder stringByExpandingTildeInPath];
 
   if ([fileManager fileExistsAtPath:folder] == NO) {
@@ -125,7 +125,7 @@
 }
 
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-  NSRunAlertPanel(@"IRCCloud", message, @"Ok", nil, nil);
+  NSRunAlertPanel(@"Nimbus", message, @"Ok", nil, nil);
 }
 
 - (void)webView:(WebView *)webView addMessageToConsole:(NSDictionary *)dictionary {

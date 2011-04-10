@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]) {
   id pool = [NSAutoreleasePool new];
 
-  NSString *logPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Logs/irccloudapp.log"];
+  NSString *logPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Logs/nimbus.log"];
   freopen([logPath fileSystemRepresentation], "a", stderr);
 
   [pool release];
