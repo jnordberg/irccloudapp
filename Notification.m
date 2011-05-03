@@ -27,7 +27,7 @@
 
   [GrowlApplicationBridge notifyWithTitle:_title
                               description:_message
-                         notificationName:@"IRCCloudMessage"
+                         notificationName:@"Message"
                                  iconData:nil
                                  priority:0
                                  isSticky:NO
