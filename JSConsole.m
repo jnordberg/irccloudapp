@@ -38,20 +38,20 @@ typedef enum {
 
   switch (level) {
     case JSLogLevelInfo:
-      levelStr = @"INFO: ";
+      levelStr = @"INFO";
       break;
     case JSLogLevelWarn:
-      levelStr = @"WARNING: ";
+      levelStr = @"WARNING";
       break;
     case JSLogLevelError:
-      levelStr = @"ERROR: ";
+      levelStr = @"ERROR";
       break;
     default:
-      levelStr = @"UNKNOWN: ";
+      levelStr = @"UNKNOWN";
       break;
   }
 
-  NSLog(@"%@", [levelStr stringByAppendingString:message]);
+  NSLog(@"%@: %@", levelStr, message);
 }
                                                                 
 - (void)consoleLog:(id)value {
