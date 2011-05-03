@@ -12,6 +12,8 @@
         <p>App is now called Nimbus</p>
         <p>Rewrite of webkitNotification implementation</p>
         <p>Bugfixes</p>
+        <p><strong>Due to the name change you have to manually install this update.</strong></p>
+        <p><a href="https://github.com/downloads/jnordberg/irccloudapp/Nimbus-0.5.zip">https://github.com/downloads/jnordberg/irccloudapp/Nimbus-0.5.zip</a></p>
       ]]></description>
       <pubDate>Tue, May 03 2011 13:17:31 +0100</pubDate>
       <enclosure
