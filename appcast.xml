@@ -7,6 +7,24 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.5</title>
+      <description><![CDATA[
+        <p>App is now called Nimbus</p>
+        <p>Rewrite of webkitNotification implementation</p>
+        <p>Bugfixes</p>
+      ]]></description>
+      <pubDate>Tue, May 03 2011 13:37:31 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/Nimbus-0.5.zip"
+        sparkle:shortVersionString="0.5"
+        sparkle:version="6"
+        length="577730"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFQDAPMs1vC8J49SQ4Z/A1omWxNUL0AIUH5IBKNdKVyG89t9zQg1mYZcy7oY="
+      />
+    </item>
+
+    <item>
       <title>Version 0.4</title>
       <description><![CDATA[
         <p>Add console and error logging. Logfile can be found in ~/Library/Logs/irccloudapp.log</p>
