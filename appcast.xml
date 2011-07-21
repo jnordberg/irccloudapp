@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>irccloudapp Changelog</title>
-    <link>https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml</link>
+    <link>http://johan-nordberg.com/nimbus-appcast.xml</link>
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
+
+    <item>
+      <title>Version 0.6</title>
+      <description><![CDATA[
+        <p>OS X Lion Full Screen support!</p>
+      ]]></description>
+      <pubDate>Tue, Jul 21 2011 02:08:56 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/Nimbus-0.6.zip"
+        sparkle:shortVersionString="0.6"
+        sparkle:version="7"
+        length="575363"
+        type="application/zip"
+        sparkle:dsaSignature="MCwCFATW5fYgxVk4e5kdH+QK5ayQ8yMUAhQxnHqpOgdKNCeREBYcVdEzMuXnbQ=="
+      />
+    </item>
 
     <item>
       <title>Version 0.5</title>
