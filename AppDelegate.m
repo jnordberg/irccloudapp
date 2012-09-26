@@ -77,7 +77,7 @@
 
   NSString *badge = nil;
   if (unread > 0) {
-    badge = [NSString stringWithFormat:@"%d", unread];
+    badge = [NSString stringWithFormat:@"%ld", unread];
   }
 
   NSRange pipepos = [title rangeOfString:@" | IRCCloud" options:NSBackwardsSearch];
@@ -141,7 +141,7 @@
 
 - (WebScriptObject *)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message {
   Notification *note = [[Notification alloc] initWithTitle:title message:message];
-  return [note autorelease];
+  return (WebScriptObject *)[note autorelease];
 }
 
 - (void)requestPermissionWithCallback:(WebScriptObject *)callback {
