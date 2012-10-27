@@ -10,14 +10,11 @@
 		256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* AppDelegate.m */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		A5157587132CFA20001BACE0 /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = A5157586132CFA20001BACE0 /* Notification.m */; };
 		A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
 		A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
 		A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */; };
-		A5454DC912BB998300186603 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
-		A5454DFB12BB9CD700186603 /* Growl.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5454DC812BB998300186603 /* Growl.framework */; };
-		A5454E0F12BBA1A300186603 /* Growl Registration Ticket.growlRegDict in Resources */ = {isa = PBXBuildFile; fileRef = A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */; };
 		A5454E4712BBAB9100186603 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5454E4612BBAB9100186603 /* Icon.icns */; };
+		A588F3F3163C00A6002896F9 /* NotificationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A588F3F2163C00A6002896F9 /* NotificationProvider.m */; };
 		A5D796BD132A30290054DF4A /* JSConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D796BC132A30290054DF4A /* JSConsole.m */; };
 		A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5EFF4B412B91F4200A4AF20 /* WebKit.framework */; };
 		A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5EFF4D312B921C500A4AF20 /* MainMenu.xib */; };
@@ -30,7 +27,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A5454DFB12BB9CD700186603 /* Growl.framework in Copy Frameworks */,
 				A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
@@ -48,13 +44,12 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Nimbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5157585132CFA20001BACE0 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
-		A5157586132CFA20001BACE0 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		A5253352131FC279005FDAAF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irccloudapp_pub.pem; sourceTree = "<group>"; };
-		A5454DC812BB998300186603 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
-		A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Growl Registration Ticket.growlRegDict"; sourceTree = "<group>"; };
 		A5454E4612BBAB9100186603 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		A588F3F1163C00A6002896F9 /* NotificationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationProvider.h; sourceTree = "<group>"; };
+		A588F3F2163C00A6002896F9 /* NotificationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationProvider.m; sourceTree = "<group>"; };
+		A588F3F5163C013D002896F9 /* WebNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebNotification.h; sourceTree = "<group>"; };
 		A5D796BB132A30290054DF4A /* JSConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSConsole.h; sourceTree = "<group>"; };
 		A5D796BC132A30290054DF4A /* JSConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSConsole.m; sourceTree = "<group>"; };
 		A5EFF4B412B91F4200A4AF20 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -68,7 +63,6 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				A5EFF4B512B91F4200A4AF20 /* WebKit.framework in Frameworks */,
-				A5454DC912BB998300186603 /* Growl.framework in Frameworks */,
 				A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,8 +77,9 @@
 				256AC3D90F4B6AC300CF3369 /* AppDelegate.m */,
 				A5D796BB132A30290054DF4A /* JSConsole.h */,
 				A5D796BC132A30290054DF4A /* JSConsole.m */,
-				A5157585132CFA20001BACE0 /* Notification.h */,
-				A5157586132CFA20001BACE0 /* Notification.m */,
+				A588F3F1163C00A6002896F9 /* NotificationProvider.h */,
+				A588F3F2163C00A6002896F9 /* NotificationProvider.m */,
+				A588F3F5163C013D002896F9 /* WebNotification.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -124,7 +119,6 @@
 				A5EFF4D312B921C500A4AF20 /* MainMenu.xib */,
 				A5454E4612BBAB9100186603 /* Icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				A5454E0612BB9F5700186603 /* Growl Registration Ticket.growlRegDict */,
 				A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */,
 			);
 			name = Resources;
@@ -137,7 +131,6 @@
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				A5EFF4B412B91F4200A4AF20 /* WebKit.framework */,
-				A5454DC812BB998300186603 /* Growl.framework */,
 				A5253352131FC279005FDAAF /* Sparkle.framework */,
 			);
 			name = Frameworks;
@@ -197,7 +190,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5454E0F12BBA1A300186603 /* Growl Registration Ticket.growlRegDict in Resources */,
 				A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */,
 				A5454E4712BBAB9100186603 /* Icon.icns in Resources */,
 				A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */,
@@ -214,7 +206,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* AppDelegate.m in Sources */,
 				A5D796BD132A30290054DF4A /* JSConsole.m in Sources */,
-				A5157587132CFA20001BACE0 /* Notification.m in Sources */,
+				A588F3F3163C00A6002896F9 /* NotificationProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

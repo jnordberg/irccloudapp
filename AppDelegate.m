@@ -1,8 +1,5 @@
 
 #import "AppDelegate.h"
-#import "Notification.h"
-
-#import <Growl/Growl.h>
 
 @interface AppDelegate (PrivateMethods)
 - (void)loadUserScripts;
@@ -17,6 +14,10 @@
   [webView setPolicyDelegate:self];
   [webView setUIDelegate:self];
 
+  // webview -> notification center bridge
+  notificationProvider = [[NotificationProvider alloc] init];
+  [webView _setNotificationProvider:notificationProvider];
+
   // user agent
   NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
   [webView setApplicationNameForUserAgent:[NSString stringWithFormat:@"nimbus/%@", version]];
@@ -26,9 +27,6 @@
             forKeyPath:@"mainFrameTitle"
                options:NSKeyValueObservingOptionNew
                context:NULL];
-
-  // seems you have to kickstart the GrowlApplicationBridge :|
-  [GrowlApplicationBridge setGrowlDelegate:nil];
 
   console = [[JSConsole alloc] init];
 
@@ -98,7 +96,6 @@
 #pragma mark FrameLoadDelegate
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
-  [windowScriptObject setValue:self forKey:@"webkitNotifications"];
   [windowScriptObject setValue:console forKey:@"console"];
 
   // inject userscripts
@@ -132,48 +129,11 @@
   NSLog(@"ERROR: %@", [dictionary objectForKey:@"message"]);
 }
 
-#pragma mark WebkitNotifications
-
-- (int)checkPermission {
-  // always grant permission (0 = allow, 1 = unknown, 2 = denied)
-  return 0;
-}
-
-- (WebScriptObject *)createNotificationWithIcon:(NSString *)icon title:(NSString *)title message:(NSString *)message {
-  Notification *note = [[Notification alloc] initWithTitle:title message:message];
-  return (WebScriptObject *)[note autorelease];
-}
-
-- (void)requestPermissionWithCallback:(WebScriptObject *)callback {
-  if (callback && [callback isMemberOfClass:[WebScriptObject class]]) {
-    [callback callWebScriptMethod:@"call" withArguments:nil];
-  }
-}
-
-+ (NSString *)webScriptNameForSelector:(SEL)sel {
-  if (sel == @selector(checkPermission)) {
-    return @"checkPermission";
-  } else if (sel == @selector(createNotificationWithIcon:title:message:)) {
-    return @"createNotification";
-  } else if (sel == @selector(requestPermissionWithCallback:)) {
-    return @"requestPermission";
-  }
-  return nil;
-}
-
-+ (BOOL)isSelectorExcludedFromWebScript:(SEL)sel {
-  if (sel == @selector(checkPermission) ||
-      sel == @selector(createNotificationWithIcon:title:message:) ||
-      sel == @selector(requestPermissionWithCallback:)) {
-    return NO;
-  }
-  return YES;
-}
-
 #pragma mark -
 
 - (void)dealloc {
   [console release];
+  [notificationProvider release];
   [userScripts release];
   [super dealloc];
 }
