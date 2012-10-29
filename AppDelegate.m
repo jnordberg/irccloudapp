@@ -32,7 +32,14 @@
 
   [self loadUserScripts];
 
-  [webView setMainFrameURL:@"https://irccloud.com"];
+  [[NSURLCache sharedURLCache] removeAllCachedResponses];
+
+  NSString *url = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
+  if (!url) url = @"https://alpha.irccloud.com/";
+
+  NSLog(@"Connecting to %@", url);
+
+  [webView setMainFrameURL:url];
 }
 
 #pragma mark -
