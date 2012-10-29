@@ -2,9 +2,29 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>irccloudapp Changelog</title>
-    <link>http://johan-nordberg.com/nimbus-appcast.xml</link>
+    <link>https://github.com/jnordberg/irccloudapp/raw/master/appcast.xml</link>
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
+
+    <item>
+      <title>Version 0.7</title>
+      <description><![CDATA[
+        <p>Using Notification Center instead of Growl</p>
+        <p>
+          Connects to alpha.irccloudapp.com
+          (configurable using <code>defaults write com.yellowagents.nimbus url -string http://other.url</code>
+        </p>
+      ]]></description>
+      <pubDate>Mon, Oct 29 2012 14:40:00 +0100</pubDate>
+      <enclosure
+        url="https://github.com/downloads/jnordberg/irccloudapp/Nimbus-0.7.zip"
+        sparkle:shortVersionString="0.7"
+        sparkle:version="8"
+        length="472461"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFQCy0AOlPwfdJaWrF+R3cabWmQFG/QIUGDVf83lfE1cYeP1psVyS9oZk0qo="
+      />
+    </item>
 
     <item>
       <title>Version 0.6</title>
