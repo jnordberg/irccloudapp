@@ -5,7 +5,7 @@ int main(int argc, char *argv[]) {
   id pool = [NSAutoreleasePool new];
 
   NSString *logPath = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Logs/nimbus.log"];
-  freopen([logPath fileSystemRepresentation], "a", stderr);
+  freopen([logPath fileSystemRepresentation], "w", stderr);
 
   [pool release];
 
