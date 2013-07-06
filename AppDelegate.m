@@ -1,4 +1,3 @@
-
 #import "AppDelegate.h"
 
 @interface AppDelegate (PrivateMethods)
@@ -35,7 +34,7 @@
   [[NSURLCache sharedURLCache] removeAllCachedResponses];
 
   NSString *url = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
-  if (!url) url = @"https://alpha.irccloud.com/";
+  if (!url) url = @"https://www.irccloud.com/";
 
   NSLog(@"Connecting to %@", url);
 
