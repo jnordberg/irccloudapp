@@ -35,7 +35,7 @@
   [[NSURLCache sharedURLCache] removeAllCachedResponses];
 
   NSString *url = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
-  if (!url) url = @"https://alpha.irccloud.com/";
+  if (!url) url = @"https://irccloud.com/";
 
   NSLog(@"Connecting to %@", url);
 
