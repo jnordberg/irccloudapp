@@ -7,6 +7,22 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.7.1</title>
+      <description><![CDATA[
+        <p>Connect using www.irccloud.com by default</p>
+      ]]></description>
+      <pubDate>Wed, Oct 16 2013 12:31:36 +0100</pubDate>
+      <enclosure
+        url="https://github.com/jnordberg/irccloudapp/releases/download/0.7.1/Nimbus-0.7.1.zip"
+        sparkle:shortVersionString="0.7.1"
+        sparkle:version="9"
+        length="473871"
+        type="application/zip"
+        sparkle:dsaSignature="MCwCFEUJj5qxx/u/n6+j6wthtSPR/SJHAhR4JUfS9cSVY3PQP/VlS35Ncn/azQ=="
+      />
+    </item>
+
+    <item>
       <title>Version 0.7</title>
       <description><![CDATA[
         <p>Using Notification Center instead of Growl</p>
