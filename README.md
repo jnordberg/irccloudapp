@@ -12,3 +12,4 @@ FEATURES
 
 * Notification center
 * Unread count in application badge
+* Loads [userscripts](http://userscripts.org/) placed in `~/Library/Application Support/nimbus/Scripts`
