@@ -69,6 +69,10 @@
 - (void)titleDidChange:(NSString *)title {
   NSUInteger unread = 0;
 
+  if ([title length] == 0) {
+    NSLog(@"WARNING: title changed to an empty string.");
+    return;
+  }
   if ([[title substringToIndex:1] isEqualToString:@"*"]) {
     title = [title substringFromIndex:2];
   } else if ([[title substringToIndex:1] isEqualToString:@"("]) {
