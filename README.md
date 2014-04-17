@@ -3,7 +3,7 @@ Nimbus
 
 Standalone irccloud.com client for OS X
 
-Download: [Nimbus-0.7.1.zip](https://github.com/jnordberg/irccloudapp/releases/download/0.7.1/Nimbus-0.7.1.zip)
+Download the [latest release](https://github.com/jnordberg/irccloudapp/releases/latest)
 
 ![Nimbus](http://xn--bl-wia.se/nimbus.png)
 
