@@ -7,6 +7,22 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.7.2</title>
+      <description><![CDATA[
+        <p>Fix crash at startup on OS X 10.9 (Mavericks)</p>
+      ]]></description>
+      <pubDate>Thu, Apr 17 2014 08:55:43 -0700</pubDate>
+      <enclosure
+        url="https://github.com/jnordberg/irccloudapp/releases/download/0.7.2/Nimbus-0.7.2.zip"
+        sparkle:shortVersionString="0.7.2"
+        sparkle:version="10"
+        length="472483"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFQCEA18dqBETdmkwb0JPesdXX2gTAQIUTjqEXDKJ56is8fl4gRdwhX6jKMo="
+      />
+    </item>
+
+    <item>
       <title>Version 0.7.1</title>
       <description><![CDATA[
         <p>Connect using www.irccloud.com by default</p>
