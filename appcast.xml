@@ -7,6 +7,22 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.7.3</title>
+      <description><![CDATA[
+        <p>Add dialog to reload if network is unavailable.</p>
+      ]]></description>
+      <pubDate>Fri, May 16 2014 00:09:43 -0600</pubDate>
+      <enclosure
+        url="https://github.com/jnordberg/irccloudapp/releases/download/0.7.3/Nimbus-0.7.3.zip"
+        sparkle:shortVersionString="0.7.3"
+        sparkle:version="11"
+        length="473301"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFDN5vBsSSiYIqVPGStAVVaIQbex+AhUAwt6IV5sJSIYixpNYCLJDw9btnng="
+      />
+    </item>
+
+    <item>
       <title>Version 0.7.2</title>
       <description><![CDATA[
         <p>Fix crash at startup on OS X 10.9 (Mavericks)</p>

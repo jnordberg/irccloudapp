@@ -10,6 +10,7 @@
   JSConsole *console;
   NotificationProvider *notificationProvider;
   NSArray *userScripts;
+  NSString *url;
 }
 
 @property (assign) IBOutlet NSWindow *window;

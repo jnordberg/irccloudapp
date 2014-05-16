@@ -2,6 +2,7 @@
 
 @interface AppDelegate (PrivateMethods)
 - (void)loadUserScripts;
+- (void)handleNetworkErrorForWebView:(WebView *)webView;
 @end
 
 @implementation AppDelegate
@@ -33,7 +34,7 @@
 
   [[NSURLCache sharedURLCache] removeAllCachedResponses];
 
-  NSString *url = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
+  url = [[NSUserDefaults standardUserDefaults] valueForKey:@"url"];
   if (!url) url = @"https://www.irccloud.com/";
 
   NSLog(@"Connecting to %@", url);
@@ -115,6 +116,25 @@
   }
 }
 
+- (void)handleNetworkErrorForWebView:(WebView *)view {
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Unable to connect to IRCCloud" defaultButton:@"Retry" alternateButton:@"Quit" otherButton:nil informativeTextWithFormat:@"Check your internet connection."];
+    [alert beginSheetModalForWindow:window completionHandler:^(NSModalResponse responseCode) {
+        if (responseCode == NSModalResponseOK) {
+            [view setMainFrameURL:url];
+        } else {
+            [NSApp stop:self];
+        }
+    }];
+}
+
+- (void)webView:(WebView *)sender didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+    [self handleNetworkErrorForWebView:sender];
+}
+
+- (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
+    [self handleNetworkErrorForWebView:sender];
+}
+
 #pragma mark WebPolicyDelegate
 
 - (void)webView:(WebView *)webView decidePolicyForNewWindowAction:(NSDictionary *)actionInformation request:(NSURLRequest *)request
@@ -127,12 +147,13 @@
 #pragma mark WebUIDelegate
 
 - (BOOL)webView:(WebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-  NSInteger result = NSRunAlertPanel(@"Please confirm", message, @"Yes", @"No", nil);
-  return result == NSAlertDefaultReturn;
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Please confirm" defaultButton:@"Yes" alternateButton:@"No" otherButton:nil informativeTextWithFormat:@"%@", message];
+    return [alert runModal] == NSAlertDefaultReturn;
 }
 
 - (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame {
-  NSRunAlertPanel(@"Nimbus", message, @"Ok", nil, nil);
+    NSAlert *alert = [NSAlert alertWithMessageText:@"Nimbus" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"%@", message];
+    [alert runModal];
 }
 
 - (void)webView:(WebView *)webView addMessageToConsole:(NSDictionary *)dictionary {
