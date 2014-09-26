@@ -116,7 +116,13 @@
   }
 }
 
-- (void)handleNetworkErrorForWebView:(WebView *)view {
+- (void)handleNetworkError:(NSError *)error forWebView:(WebView *)view {
+    NSString *failingURL = [error.userInfo valueForKey:@"NSErrorFailingURLStringKey"];
+    if (!failingURL || [failingURL rangeOfString:url options:NSAnchoredSearch].location == NSNotFound) {
+        // If the URL isn't an irccloud URL, we don't care if it is down, the irccloud interface should still work.
+        return;
+    }
+
     NSAlert *alert = [NSAlert alertWithMessageText:@"Unable to connect to IRCCloud" defaultButton:@"Retry" alternateButton:@"Quit" otherButton:nil informativeTextWithFormat:@"Check your internet connection."];
     [alert beginSheetModalForWindow:window completionHandler:^(NSModalResponse responseCode) {
         if (responseCode == NSModalResponseOK) {
@@ -128,11 +134,11 @@
 }
 
 - (void)webView:(WebView *)sender didFailLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
-    [self handleNetworkErrorForWebView:sender];
+    [self handleNetworkError:error forWebView:sender];
 }
 
 - (void)webView:(WebView *)sender didFailProvisionalLoadWithError:(NSError *)error forFrame:(WebFrame *)frame {
-    [self handleNetworkErrorForWebView:sender];
+    [self handleNetworkError:error forWebView:sender];
 }
 
 #pragma mark WebPolicyDelegate
