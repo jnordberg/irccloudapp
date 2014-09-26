@@ -7,6 +7,23 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.7.4</title>
+      <description><![CDATA[
+        <p>Limit reload dialog to only appear if there are connection problems to IRCCloud itself.</p>
+        <p>Ignore drop events since the irccloud app doesn't handle them, and it breaks the app experience.</p>
+      ]]></description>
+      <pubDate>Fri, Sep 26 2014 11:34:15 -0700</pubDate>
+      <enclosure
+        url="https://github.com/jnordberg/irccloudapp/releases/download/0.7.4/Nimbus-0.7.4.zip"
+        sparkle:shortVersionString="0.7.4"
+        sparkle:version="12"
+        length="473562"
+        type="application/zip"
+        sparkle:dsaSignature="MC0CFQCc4q3w4FOw40ltZ7zG5TI/kzXSmgIUJvlQmfxUjc35/zPMPbagJMiyNc0="
+      />
+    </item>
+
+    <item>
       <title>Version 0.7.3</title>
       <description><![CDATA[
         <p>Add dialog to reload if network is unavailable.</p>
