@@ -166,10 +166,16 @@
   NSLog(@"ERROR: %@", [dictionary objectForKey:@"message"]);
 }
 
-- (NSUInteger)webView:(WebView *)webView dragDestinationActionMaskForDraggingInfo:(id<NSDraggingInfo>)draggingInfo {
-    // Ignore all drop events, since the default behavior is to navigate to the dropped file,
-    // which breaks the native app feel.
-    return WebDragSourceActionNone;
+- (void)webView:(WebView *)sender runOpenPanelForFileButtonWithResultListener:(id < WebOpenPanelResultListener >)resultListener
+{
+    NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+    [openDlg setCanChooseFiles:YES];
+    [openDlg setCanChooseDirectories:NO];
+    
+    if ([openDlg runModal] == NSOKButton) {
+        NSArray* files = [[openDlg URLs] valueForKey:@"relativePath"];
+        [resultListener chooseFilenames:files];
+    }
 }
 
 #pragma mark -
