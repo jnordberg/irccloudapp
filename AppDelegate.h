@@ -4,7 +4,7 @@
 #import "JSConsole.h"
 #import "NotificationProvider.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
+@interface AppDelegate : NSObject <NSApplicationDelegate, WebFrameLoadDelegate, WebUIDelegate, WebPolicyDelegate> {
   NSWindow *window;
   WebView *webView;
   JSConsole *console;
