@@ -13,6 +13,7 @@
 		A5253353131FC279005FDAAF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; };
 		A525335C131FC287005FDAAF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = A5253352131FC279005FDAAF /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */; };
+		A544EA2E1E0557030059F92D /* digit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A544EA2D1E0557030059F92D /* digit.mp3 */; };
 		A5454E4712BBAB9100186603 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A5454E4612BBAB9100186603 /* Icon.icns */; };
 		A588F3F3163C00A6002896F9 /* NotificationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = A588F3F2163C00A6002896F9 /* NotificationProvider.m */; };
 		A5D796BD132A30290054DF4A /* JSConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D796BC132A30290054DF4A /* JSConsole.m */; };
@@ -46,6 +47,7 @@
 		8D1107320486CEB800E47090 /* Nimbus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nimbus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5253352131FC279005FDAAF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A52533B1131FD4C2005FDAAF /* irccloudapp_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = irccloudapp_pub.pem; sourceTree = "<group>"; };
+		A544EA2D1E0557030059F92D /* digit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = digit.mp3; sourceTree = "<group>"; };
 		A5454E4612BBAB9100186603 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		A588F3F1163C00A6002896F9 /* NotificationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationProvider.h; sourceTree = "<group>"; };
 		A588F3F2163C00A6002896F9 /* NotificationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationProvider.m; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A544EA2D1E0557030059F92D /* digit.mp3 */,
 				A5EFF4D312B921C500A4AF20 /* MainMenu.xib */,
 				A5454E4612BBAB9100186603 /* Icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -190,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A544EA2E1E0557030059F92D /* digit.mp3 in Resources */,
 				A5EFF4D412B921C500A4AF20 /* MainMenu.xib in Resources */,
 				A5454E4712BBAB9100186603 /* Icon.icns in Resources */,
 				A52533B2131FD4C2005FDAAF /* irccloudapp_pub.pem in Resources */,

@@ -108,6 +108,9 @@
 
 - (void)webView:(WebView *)sender didClearWindowObject:(WebScriptObject *)windowScriptObject forFrame:(WebFrame *)frame {
   [windowScriptObject setValue:console forKey:@"console"];
+    
+  // disable notification sound
+  [windowScriptObject evaluateWebScript:@"HTMLAudioElement.prototype.play = function(){}"];
 
   // inject userscripts
   for (NSString *script in userScripts) {

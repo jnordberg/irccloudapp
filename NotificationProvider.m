@@ -44,6 +44,7 @@ NSString *notificationKey(WebNotification *notification) {
   userNotification.title = webNotification.title;
   userNotification.informativeText = webNotification.body;
   userNotification.userInfo = [NSDictionary dictionaryWithObject:key forKey:@"webNotification"];
+  userNotification.soundName = @"digit";
 
   [_webNotifications setValue:webNotification forKey:key];
   [_userNotifications setValue:userNotification forKey:key];
