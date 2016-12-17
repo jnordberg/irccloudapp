@@ -20,6 +20,7 @@
                 <outlet property="window" destination="F0z-JX-Cv5" id="F0d-Fw-9It"/>
             </connections>
         </customObject>
+        <customObject id="rjY-RO-DNI" userLabel="Sparkle" customClass="SUUpdater"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Nimbus" id="1Xt-HY-uBw">
@@ -32,8 +33,12 @@
                                     <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                            <menuItem title="Check for updates..." id="guL-dj-sF8">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="checkForUpdates:" target="rjY-RO-DNI" id="Hnm-mw-UzE"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                             <menuItem title="Services" id="NMo-om-nkz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
