@@ -42,6 +42,13 @@
   [webView setMainFrameURL:url];
 }
 
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+  if (flag == NO) {
+    [window makeKeyAndOrderFront:self];
+  }
+  return YES;
+}
+
 #pragma mark -
 
 - (void)loadUserScripts {
