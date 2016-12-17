@@ -301,10 +301,26 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" id="HyV-fh-RgO">
                         <items>
-                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="4J7-dP-txa">
+                            <menuItem title="Standard text size" keyEquivalent="0" id="4J7-dP-txa">
+                                <connections>
+                                    <action selector="makeTextStandardSize:" target="se5-gp-TjO" id="7D9-1g-Ruz"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Increase text size" keyEquivalent="+" id="IPe-Py-gRS">
+                                <connections>
+                                    <action selector="makeTextLarger:" target="se5-gp-TjO" id="LFC-RS-5g9"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Decrease text size" keyEquivalent="-" id="fFY-VZ-nHT">
+                                <connections>
+                                    <action selector="makeTextSmaller:" target="se5-gp-TjO" id="JAN-U8-gQ2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="KkZ-Gf-gAo"/>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="jm6-rN-evG">
                                 <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                 <connections>
-                                    <action selector="toggleFullScreen:" target="-1" id="dU3-MA-1Rq"/>
+                                    <action selector="toggleFullScreen:" target="-1" id="jPZ-GQ-02h"/>
                                 </connections>
                             </menuItem>
                         </items>
