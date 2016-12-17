@@ -7,6 +7,24 @@
     <language>en</language>
 
     <item>
+      <title>Version 0.8.0</title>
+      <description><![CDATA[
+        <p>File uploads now working.</p>
+        <p>"Do not disturb" in notification center also mutes notification sound.</p>
+        <p>Window can now be closed while the app is still running and connected.</p>
+      ]]></description>
+      <pubDate>Sat, 17 Dec 2016 13:05:53 GMT</pubDate>
+      <enclosure
+        url="https://github.com/jnordberg/irccloudapp/releases/download/0.8.0/Nimbus.zip"
+        sparkle:shortVersionString="0.8.0"
+        sparkle:version="13"
+        length="1244760"
+        type="application/zip"
+        sparkle:dsaSignature="MC4CFQC4mjBhch+d6P5ekDrdFJil22I8EwIVAMOdchSlA8OXkYLZ9h5OmhtJ6KAM"
+      />
+    </item>
+
+    <item>
       <title>Version 0.7.4</title>
       <description><![CDATA[
         <p>Limit reload dialog to only appear if there are connection problems to IRCCloud itself.</p>
